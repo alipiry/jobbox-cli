@@ -70,8 +70,6 @@ func updateJob(db *sql.DB, jobId string, job util.Job) {
 	}
 
 	fmt.Println("Updating job with id:", jobId)
-
 	statement.Exec(title, description, city, jobId)
-
 	fmt.Println("Job with id:", jobId, "updated")
 }

@@ -43,14 +43,12 @@ func CreateJobCmd() *cobra.Command {
 }
 
 func createJob(db *sql.DB, job util.Job) {
-	insertJobQuery := `insert into jobs (title, description, city) values (?, ?, ?);`
+	createJobQuery := `insert into jobs (title, description, city) values (?, ?, ?);`
 
-	statement, err := db.Prepare(insertJobQuery)
+	statement, err := db.Prepare(createJobQuery)
 	cobra.CheckErr(err)
 
 	fmt.Println("Creating new job...")
-
 	statement.Exec(job.Title, job.Description, job.City)
-
 	fmt.Println("New job created")
 }
