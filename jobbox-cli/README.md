@@ -1,4 +1,4 @@
-# Jobox CLI
+# Jobbox CLI
 
 ```bash
 Jobbox CLI is a tool to create your customized jobboard.
