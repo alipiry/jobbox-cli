@@ -31,8 +31,34 @@ func SetupCmd() *cobra.Command {
 				fmt.Println("DB created")
 
 				db := util.Db()
+				defer db.Close()
 
-				createJobsTable(db)
+				jobsQuery := `create table jobs (
+					"id" integer primary key autoincrement,		
+					"title" text not null,
+					"description" text not null,
+					"city" text not null,
+					"created_at" text default (datetime('now'))
+				);`
+
+				candidatesQuery := `create table candidates (
+					"id" integer primary key autoincrement,		
+					"name" text not null,
+					"email" text not null,
+					"phone_number" text not null,
+					"created_at" text default (datetime('now'))
+				);`
+
+				jobCandidatesQuery := `create table job_candidates (
+					"id" integer primary key autoincrement,		
+					"job_id" integer not null references jobs(id),
+					"candidate_id" integer not null references candidates(id),
+					"created_at" text default (datetime('now'))
+				);`
+
+				createTable(db, jobsQuery, "jobs")
+				createTable(db, candidatesQuery, "candidates")
+				createTable(db, jobCandidatesQuery, "job_candidates")
 
 			} else {
 				fmt.Println("DB already created!")
@@ -44,22 +70,11 @@ func SetupCmd() *cobra.Command {
 	return cmd
 }
 
-func createJobsTable(db *sql.DB) {
-	jobsTableQuery := `create table jobs (
-		"id" integer primary key autoincrement,		
-    "title" text not null,
-    "description" text not null,
-    "city" text not null,
-    "created_at" text default (datetime('now'))
-	  );`
-
-	fmt.Println("Creating jobs table...")
-
-	statement, err := db.Prepare(jobsTableQuery)
-
+func createTable(db *sql.DB, tableQuery string, tableName string) {
+	statement, err := db.Prepare(tableQuery)
 	cobra.CheckErr(err)
 
+	fmt.Println("Creating", tableName, "table...")
 	statement.Exec()
-
-	fmt.Println("Jobs table created")
+	fmt.Println(tableName, "table created")
 }
