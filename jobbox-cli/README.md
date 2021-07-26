@@ -13,7 +13,7 @@ Available Commands:
   help: Help about any command
   job: Create or edit job
   jobs: Show open jobs
-  setupL Setup DB for your jobboard
+  setup: Setup DB for your jobboard
 
 Flags:
   -h, --help: help for jobbox-cli
