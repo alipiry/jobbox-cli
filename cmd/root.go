@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"github.com/alipiry/jobbox/jobbox-cli/cmd/candidate"
+	"github.com/alipiry/jobbox/jobbox-cli/cmd/candidates"
 	"github.com/alipiry/jobbox/jobbox-cli/cmd/job"
 	"github.com/alipiry/jobbox/jobbox-cli/cmd/jobs"
 	"github.com/alipiry/jobbox/jobbox-cli/cmd/setup"
@@ -23,4 +25,7 @@ func init() {
 	rootCmd.AddCommand(setup.SetupCmd())
 	rootCmd.AddCommand(job.JobCmd())
 	rootCmd.AddCommand(jobs.JobsCmd())
+	rootCmd.AddCommand(candidate.CandidateCmd())
+	rootCmd.AddCommand(candidates.CandidatesCmd())
+
 }

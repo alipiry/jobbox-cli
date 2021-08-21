@@ -13,6 +13,11 @@ type Job struct {
 	Description string
 	City        string
 }
+type Candidate struct {
+	Name       string
+	Email string
+	PhoneNumber        string
+}
 
 func DbNotExists() (bool, string, string) {
 	home, homeError := os.UserHomeDir()
