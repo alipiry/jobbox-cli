@@ -9,11 +9,14 @@ Usage:
   jobbox-cli [command]
 
 Available Commands:
-  completion: generate the autocompletion script for the specified shell
-  help: Help about any command
-  job: Create or edit job
-  jobs: Show open jobs
-  setup: Setup DB for your jobboard
+  apply       Apply for open jobs
+  candidate   Create or edit candidate
+  candidates  Show existing candidates
+  completion  generate the autocompletion script for the specified shell
+  help        Help about any command
+  job         Create or edit job
+  jobs        Show open jobs
+  setup       Setup DB for your jobboard
 
 Flags:
   -h, --help: help for jobbox-cli
