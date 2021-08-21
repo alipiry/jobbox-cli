@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/MakeNowJust/heredoc"
-	"github.com/alipiry/jobbox/jobbox-cli/util"
+	"github.com/alipiry/jobbox-cli/util"
 	"github.com/spf13/cobra"
 )
 

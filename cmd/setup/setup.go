@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/alipiry/jobbox/jobbox-cli/util"
+	"github.com/alipiry/jobbox-cli/util"
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/spf13/cobra"
 )

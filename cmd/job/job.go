@@ -2,8 +2,8 @@ package job
 
 import (
 	"github.com/MakeNowJust/heredoc"
-	createCmd "github.com/alipiry/jobbox/jobbox-cli/cmd/job/create"
-	updateCmd "github.com/alipiry/jobbox/jobbox-cli/cmd/job/edit"
+	createCmd "github.com/alipiry/jobbox-cli/cmd/job/create"
+	updateCmd "github.com/alipiry/jobbox-cli/cmd/job/edit"
 	"github.com/spf13/cobra"
 )
 

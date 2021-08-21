@@ -2,8 +2,8 @@ package candidate
 
 import (
 	"github.com/MakeNowJust/heredoc"
-	createCmd "github.com/alipiry/jobbox/jobbox-cli/cmd/candidate/create"
-	updateCmd "github.com/alipiry/jobbox/jobbox-cli/cmd/candidate/edit"
+	createCmd "github.com/alipiry/jobbox-cli/cmd/candidate/create"
+	updateCmd "github.com/alipiry/jobbox-cli/cmd/candidate/edit"
 	"github.com/spf13/cobra"
 )
 

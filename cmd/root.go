@@ -1,12 +1,12 @@
 package cmd
 
 import (
-	"github.com/alipiry/jobbox/jobbox-cli/cmd/apply"
-	"github.com/alipiry/jobbox/jobbox-cli/cmd/candidate"
-	"github.com/alipiry/jobbox/jobbox-cli/cmd/candidates"
-	"github.com/alipiry/jobbox/jobbox-cli/cmd/job"
-	"github.com/alipiry/jobbox/jobbox-cli/cmd/jobs"
-	"github.com/alipiry/jobbox/jobbox-cli/cmd/setup"
+	"github.com/alipiry/jobbox-cli/cmd/apply"
+	"github.com/alipiry/jobbox-cli/cmd/candidate"
+	"github.com/alipiry/jobbox-cli/cmd/candidates"
+	"github.com/alipiry/jobbox-cli/cmd/job"
+	"github.com/alipiry/jobbox-cli/cmd/jobs"
+	"github.com/alipiry/jobbox-cli/cmd/setup"
 	"github.com/spf13/cobra"
 )
 
@@ -29,5 +29,4 @@ func init() {
 	rootCmd.AddCommand(candidate.CandidateCmd())
 	rootCmd.AddCommand(candidates.CandidatesCmd())
 	rootCmd.AddCommand(apply.ApplyCmd())
-
 }

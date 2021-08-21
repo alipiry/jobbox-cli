@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"os"
 
-	"github.com/alipiry/jobbox/jobbox-cli/util"
+	"github.com/alipiry/jobbox-cli/util"
 	"github.com/jedib0t/go-pretty/table"
 	"github.com/spf13/cobra"
 )
